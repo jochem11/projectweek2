@@ -3,12 +3,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
   background: rgb(250, 250, 250) url(http://lorempixel.com/1920/1080/nature/);
   font-family: Lato, Helvetica, Arial, sans-serif;
-  background-color: #7161ef;
+  background-color: #dacc96;
+  background-image: url("../pictures/achtergrond.webp");
 }
 
 a {
@@ -22,7 +24,7 @@ a {
                           Navbar
   ======================================================*/
 #navbar {
-  background: white;
+  background: #bf8b67;
   color: rgb(13, 26, 38);
   position: fixed;
   top: 0;
@@ -104,7 +106,7 @@ a {
 
 #navbar li a:hover {
   /* border-bottom: 1px solid rgb(28, 121, 184); */
-  color: rgb(28, 121, 184);
+  color: #632626;
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
 }
@@ -323,7 +325,7 @@ a {
                    Responsive Mobile Menu 
   ======================================================*/
 .overlay-menu {
-  background: lightblue;
+  background: #8f5656;
   color: rgb(13, 26, 38);
   display: flex;
   align-items: center;
@@ -361,7 +363,7 @@ a {
 
 .overlay-menu li a:hover,
 .overlay-menu li a:active {
-  color: rgb(28, 121, 184);
+  color: #632626;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
@@ -377,20 +379,39 @@ a {
   flex-wrap: wrap;
 }
 
-.personencontainer .personenplaatjes {
-  width: 30%;
+.personencontainer .personencontainer2 {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.personencontainer .personencontainer2 .personenplaatjes {
+  width: 300px;
   height: 300px;
   background-color: aqua;
   margin-bottom: 10px;
 }
 
-.personencontainer .textcontainer {
+.personencontainer .personencontainer2 .textcontainer {
   width: 70%;
   height: 300px;
-  background-color: greenyellow;
+  background-color: #ac7575;
   margin-bottom: 10px;
 }
 
+.personencontainer .personencontainer2 .textcontainer p {
+  padding: 10px;
+}
+
+.containerhome .hometext {
+  width: 70%;
+  min-height: 200px;
+  height: auto;
+  background-color: #8f5656;
+  margin-left: auto;
+  margin-right: auto;
+}
 .containerhome {
   margin-top: 60px;
   width: 100%;
@@ -400,26 +421,9 @@ a {
   margin-bottom: 30px;
 }
 
-.containerhome .hometext {
-  width: 60%;
-  min-height: 200px;
-  height: auto;
-  background-color: brown;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.containerhome .homeplaatje {
-  width: 60%;
-  height: 600px;
-  background-color: darkblue;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .containerhome .hometext h1 {
   color: white;
-  width: 100%;
+  width: fit-content;
   margin-left: auto;
   margin-right: auto;
 }
@@ -447,17 +451,17 @@ a {
 .robotcontainer .robottext {
   min-height: 300px;
   height: auto;
-  width: 60%;
-  background-color: lavender;
+  width: 70%;
+  background-color: #8f5656;
   margin-left: auto;
   margin-right: auto;
 }
 
 .robotcontainer .plaatjesrobot {
-  width: 60%;
+  width: 70%;
   min-height: 400px;
   height: auto;
-  background-color: lightskyblue;
+  background-color: #ac7575;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
@@ -479,18 +483,49 @@ a {
 .BHCcontainer .BHCtext {
   min-height: 300px;
   height: auto;
-  width: 60%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
-  background-color: mediumpurple;
+  background-color: #8f5656;
 }
 .BHCcontainer .BHCplaatjes {
   min-height: 500px;
   height: auto;
-  background-color: mistyrose;
+  background-color: #ac7575;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 70%;
+}
+
+.containerhome .homeplaatje {
+  width: 70%;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 520px) {
+  .personencontainer,
+  .containerhome .homeplaatje,
+  .containerhome .hometext,
+  .robotcontainer .robottext,
+  .robotcontainer .plaatjesrobot,
+  .BHCcontainer .BHCtext,
+  .BHCcontainer .BHCplaatjes {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  .personencontainer .personencontainer2 .textcontainer p {
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+    margin-bottom: 10%;
+    height: 100%;
+  }
 }
 
 .footer-distributed {
